@@ -7,6 +7,7 @@ import ScheduleCard from "./ScheduleCard";
 
 const scheduleData = {
   "2025-04-20": [
+    
     {
       time: "8:30 - 10:00",
       subject: "Математический анализ",

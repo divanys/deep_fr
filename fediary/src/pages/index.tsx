@@ -1,16 +1,27 @@
 import { useNavigate } from "react-router-dom";
 import frogLogo from '../../public/frog.png';
-import cheogo from '../../public/Group_1948757405.svg';
-
+import cheogo from '../../public/converted.svg';
 
 const HomePage = () => {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen relative bg-white">
-      {/* Главный контейнер с закруглением */}
-      <div className="bg-[#00112E] h-[550px] rounded-b-[75%] pt-5 px-5">
-        {/* Декоративные волнистые линии - фон */}
+      {/* Основной контейнер с адаптивным SVG */}
+      <div className="relative h-[550px] pt-5 px-5 overflow-hidden">
+        <svg 
+          viewBox="0 0 1440 761" 
+          fill="none" 
+          preserveAspectRatio="none"
+          className="absolute inset-0 w-full h-full"
+        >
+          <path 
+            d="M0 0H1440V228.639C1440 228.639 1320.22 174.248 1216 228.639C1103.5 287.351 1043 640.04 886.363 715.688C762 775.75 480.428 620.496 311.863 640.04C138.579 660.131 0 761 0 761V0Z" 
+            fill="#00112E"
+          />
+        </svg>
+
+        {/* Декоративные волны */}
         <div className="fixed inset-0 -z-10 pointer-events-none">
           <div className="absolute top-0 left-0 right-0 h-64 overflow-hidden">
             <svg 
@@ -39,7 +50,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        {/* Header */}
+        {/* Шапка */}
         <header className="flex justify-between items-center p-6 relative z-10">
           <div className="flex items-center">
             <img src={frogLogo} alt="Logo" className="h-10 w-10" />
@@ -52,7 +63,7 @@ const HomePage = () => {
           </button>
         </header>
 
-        {/* Hero Section */}
+        {/* Основной контент */}
         <div className="container mx-auto px-4 py-12 md:py-24 grid md:grid-cols-2 gap-8 items-center relative z-10">
           <div className="max-w-lg">
             <h1 className="text-4xl font-bold mb-2 text-white">Электронный дневник.</h1>
@@ -68,13 +79,12 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Features Section */}
+      {/* Секция возможностей */}
       <div className="py-16 relative z-10">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-12">Какова цель проекта?</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Feature 1 */}
             <div className="bg-white p-6 rounded-lg shadow-md relative">
               <div className="absolute top-4 right-4">
                 <div className="text-gray-400">
@@ -87,7 +97,6 @@ const HomePage = () => {
               <p className="mt-6">Повышение прозрачности и доступности информации об успеваемости и посещаемости учащихся.</p>
             </div>
             
-            {/* Feature 2 */}
             <div className="bg-white p-6 rounded-lg shadow-md relative">
               <div className="absolute top-4 right-4">
                 <div className="text-gray-400">
@@ -100,7 +109,6 @@ const HomePage = () => {
               <p className="mt-6">Упрощение взаимодействия между учениками, родителями и учителями.</p>
             </div>
             
-            {/* Feature 3 */}
             <div className="bg-white p-6 rounded-lg shadow-md relative">
               <div className="absolute top-4 right-4">
                 <div className="text-gray-400">
@@ -116,7 +124,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Contact Section */}
+      {/* Контактная секция */}
       <div className="bg-gray-100 py-10 relative z-10">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -142,7 +150,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Footer */}
+      {/* Футер */}
       <footer className="bg-gray-200 py-4 text-center text-sm text-gray-600 relative z-10">
         <p>Политика конфиденциальности</p>
       </footer>

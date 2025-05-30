@@ -34,12 +34,6 @@ function App() {
           {/* <Route path="/teacher/dashboard" element={<TeacherDashboard />} /> */}
         </Route>
         
-        
-        {/* Админ-панель (только для админов) */}
-        <Route element={<ProtectedRoute allowedRoles={["admin"]} />}>
-          {/* <Route path="/admin" element={<AdminPanel />} /> */}
-        </Route>
-        
         {/* 404 - Not Found */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

@@ -7,4 +7,8 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
+    root: './', // корень — рабочая директория контейнера (/build)
+  build: {
+    outDir: 'dist'
+  }
 })
